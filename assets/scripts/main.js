@@ -28,13 +28,24 @@ function adjustNumber(){
 
     if(volume >= 67){
         document.getElementById("volume-image").src = "./assets/media/icons/volume-level-3.svg";
+        document.getElementById("honk-btn").disabled = false;
     }else if(volume >=34){
         document.getElementById("volume-image").src = "./assets/media/icons/volume-level-2.svg";
+        document.getElementById("honk-btn").disabled = false;
     }else if(volume >= 1){
         document.getElementById("volume-image").src = "./assets/media/icons/volume-level-1.svg";
+        document.getElementById("honk-btn").disabled = false;
     }else{
         document.getElementById("volume-image").src = "./assets/media/icons/volume-level-0.svg";
         document.getElementById("honk-btn").disabled = true;
+    }
+
+    if(volume > 100){
+        sound_number.value = "100";
+        sound_range.value = "100";
+    }else if(volume < 0){
+        sound_number.value = "0";
+        sound_range.value = "0";
     }
 
     let sound = document.getElementById("horn-sound");
@@ -48,13 +59,24 @@ function adjustSlider(){
 
     if(volume >= 67){
         document.getElementById("volume-image").src = "./assets/media/icons/volume-level-3.svg";
+        document.getElementById("honk-btn").disabled = false;
     }else if(volume >=34){
         document.getElementById("volume-image").src = "./assets/media/icons/volume-level-2.svg";
+        document.getElementById("honk-btn").disabled = false;
     }else if(volume >= 1){
         document.getElementById("volume-image").src = "./assets/media/icons/volume-level-1.svg";
+        document.getElementById("honk-btn").disabled = false;
     }else{
         document.getElementById("volume-image").src = "./assets/media/icons/volume-level-0.svg";
         document.getElementById("honk-btn").disabled = true;
+    }
+
+    if(volume > 100){
+        sound_number.value = "100";
+        sound_range.value = "100";
+    }else if(volume < 0){
+        sound_number.value = "0";
+        sound_range.value = "0";
     }
 
     let sound = document.getElementById("horn-sound");
